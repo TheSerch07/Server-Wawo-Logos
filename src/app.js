@@ -9,4 +9,4 @@ server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
 server.use(morgan("dev"));
 
-module.exports = server
+module.exports = server;
