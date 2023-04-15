@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const { transporter } = require("./config/mailer")
+const cors = require("cors")
 require("dotenv").config();
 
 const server = express();
@@ -9,6 +10,7 @@ const server = express();
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
 server.use(morgan("dev"));
+server.use(cors())
 
 server.get("/", (req, res) => {
     console.log("ready")
