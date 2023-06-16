@@ -23,7 +23,8 @@ server.post("/sendEmail", async (req, res) => {
         const {nombre, cuentanosMas, palabras, eslogan, estilos, correo} = req.body
         await transporter.sendMail({
             from: `"Hola, ${nombre} está a la espera de su nuevo logo. 👀" <sergio@whateverworks.design>"`,
-            to: ["jejog50@gmail.com", "sergio@whateverworks.design", "mauricio.gaitan@whateverworks.design", "laura.gutierrez@whateverworks.design", "angie.castillo@whateverworks.design", "hello@whateverworks.design"],
+            // to: ["jejog50@gmail.com", "sergio@whateverworks.design", "mauricio.gaitan@whateverworks.design", "laura.gutierrez@whateverworks.design", "angie.castillo@whateverworks.design", "hello@whateverworks.design"],
+            to: ["jejog50@gmail.com", "sergio@whateverworks.design"],
             subject: "¡Hola, equipo! ¡Tenemos un nuevo cliente a la espera de su nuevo logo! 😋",
             html: `<div>
                     <h1>Los datos del cliente</h1>
